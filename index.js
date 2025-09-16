@@ -3,7 +3,7 @@
 'use strict'
 
 async function pesquisarCep (cep) {
-    const url = `https://corsproxy.io/?https://cdn.apicep.com/file/apicep/${cep}.json` //Proxy usado porque o site estava bloqueando as requisições
+    const url = `https://corsproxy.io/?url=https://cdn.apicep.com/file/apicep/${cep}.json` //Proxy usado porque o site estava bloqueando as requisições
     const response = await fetch(url)
     const data = await response.json();
     return data
